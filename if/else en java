@@ -1,0 +1,55 @@
+package comparacion;
+import javax.swing.JOptionPane;
+public class Comparacion {
+    public static void main(String[] args) {
+        byte a, b, c;
+        a = Byte.parseByte(JOptionPane.showInputDialog("Escribe un número: "));
+        b = Byte.parseByte(JOptionPane.showInputDialog("Escribe otro número: "));
+        c = Byte.parseByte(JOptionPane.showInputDialog("Escribe un ultimo número: "));
+        if (a == b){
+            if (a == c){
+                JOptionPane.showMessageDialog(null,"Los 3 números son iguales");
+            } else {
+                if (b < c){
+                    JOptionPane.showMessageDialog(null,"El número mayor es: " + c);
+                } else {
+                    if (b > c){
+                        JOptionPane.showMessageDialog(null,"Los número mayores son: " + a + " y " + b);
+                    }
+                }
+            }
+        } else {
+            if (a > b){
+                if (b >= c){
+                    JOptionPane.showMessageDialog(null,"El número mayor es: " + a);
+                } else {
+                    if (a > b){
+                        JOptionPane.showMessageDialog(null, "El número mayor es: " + a);
+                    } else {
+                        if (b < c){
+                            if (a == c){
+                                JOptionPane.showMessageDialog(null, "Los números mayores son: " + a + " y " + c);
+                            } else {
+                                JOptionPane.showMessageDialog(null, "El número mayor es: " + c);
+                            }
+                        }
+                    }
+                }
+            } else {
+                if (a < b){
+                    if (b > c){
+                        JOptionPane.showMessageDialog(null, "El número mayor es: " + b);
+                    } else {
+                        if (b < c){
+                            JOptionPane.showMessageDialog(null, "El número mayor es: " +c);
+                        } else {
+                            if (b == c){
+                                JOptionPane.showMessageDialog(null, "Los números mayores son: " +b + " y " + c);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
